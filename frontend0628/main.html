@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .redarea{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="./index.html">인덱스</a></p>
+    <a href="http://www.naver.com" target="_blank">네이버</a>
+    
+    
+    <h1 class="redarea">안녕하세요</h1>
+    <p>반갑습니다</p>
+    <p id="adam">두번째 단락</p>
+    <button id="btn">클릭</button>
+    <script>
+        document.getElementById("btn").addEventListener(
+            "click", function(e){document.getElementById("adam").innerHTML="클릭"}
+        )
+    </script>
+
+    <h3>커피</h3>
+    <ol>
+        <li>아메리카노</li>
+        <li>카페라떼</li>
+    </ol>
+    <p>수정함</p>
+
+    <img src="https://jmagazine.joins.com/_data2/photo/2023/03/2041357502_g1c0Rhx8_1.jpg" width="300" height="200" />
+    <img src="./img/123.jpg" width="300" height="200"/>
+
+</body>
+</html>

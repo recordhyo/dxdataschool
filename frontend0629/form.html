@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--action은 처리할 서버의 URL, method는 get/post, enctype 특수상황 "multipart/form-data" 파일있을때-->
+    <form action="register" method="get">
+        <!--name은 서버에서 사용하기 위한 이름, id는 클라이언트 사용하기위한 이름-->
+        <label>이름 : <input type="text" name="name" id="name"/></label><br/>
+
+    </form>
+
+    <label>이름 : <input type="text" placeholder="ㅇㅇㅇ"></label><br/>
+    <label>비밀번호 : <input type="password"></label><br/>
+    <input type="radio" name="gender"> 남자
+    <input type="radio" name="gender" checked="checked"> 여자<br/>
+    <input type="checkbox" name="hobby"> 등산
+    <input type="checkbox" name="hobby"> 독서
+    <input type="checkbox" name="hobby"> 운동<br/>
+    <input type="file">
+    <form action="./test.html">
+        메시지: <input type="text" name="message"><br>
+        <input type="submit">
+        <input type="reset">
+        <input type="image" src="http://placehold.it/50x50?text=click" alt="click" width="50" height="20">
+        <input type="button" value="버튼">
+    </form>
+
+</body>
+</html>

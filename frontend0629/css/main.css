@@ -1,0 +1,21 @@
+p{
+    color:aqua;
+
+}
+/*주석*/
+li{
+    color:black;
+}
+
+p:hover{
+    color : green;
+
+}
+
+li:active{
+    color : white;
+}
+
+input:focus{
+    background-color: aqua;
+}
