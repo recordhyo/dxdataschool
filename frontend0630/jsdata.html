@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 데이터</title>
+</head>
+<body>
+    <script>
+        //let은 변경 가능한 데이터 이름 생성
+        //const는 변경 불가능한 데이터 이름 생성
+        let name = "박효심"
+        let age = 27
+
+        //변경 불가능한 데이터 이름은 모두 대문자로 만드는 것을 선호
+        const HOMETOWN = "광주"
+        name = "park"
+        //에러 HOMETOWN = "서울"
+        document.write(name, HOMETOWN)
+
+        let project
+        console.log(project) //만들지 않아서 undefined
+        let school = null
+        console.log(school) //가리키는 데이터가 없음
+
+    </script>
+</body>
+</html>
