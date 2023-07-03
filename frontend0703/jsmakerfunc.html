@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maker Function</title>
+</head>
+<body>
+    <script>
+        let r = confirm("식사는 하셨나요?")
+        //조건에서 ==true는 생략 가능
+        if (r){
+            document.write("무엇을 드셨나요?")
+        } else {
+            document.write("식사를 하세요")
+        }
+
+        let redvelvet = "name=아이린"
+        let encoding = encodeURI(redvelvet);
+        alert(encoding);
+        alert(decodeURI(encoding));
+
+
+
+    </script>
+</body>
+</html>
