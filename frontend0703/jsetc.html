@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //for문 중첩
+        for(i=1; i<=5; i++){
+            for(j=1; j<=i; j++){
+                document.write("*")
+            }
+            document.write("<br/>")
+        }
+
+        for(j=1; j<=5; j++){
+            if ( j% 2==0){ 
+                break; //반복문 중단
+            }
+                document.write(j)
+        }
+
+        for(j=1; j<=5; j++){
+            if ( j% 2==0){ 
+                continue; //아래 문장 수행하지 않고 다음 반복문으로 넘어감
+            }
+                document.write(j)
+        }        
+
+    </script>
+</body>
+</html>

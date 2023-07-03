@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function2</title>
+</head>
+<body>
+    <script>
+        function zerga() {
+            document.write("저그의 공격"+"<br/>")
+        }
+        function protossa() {
+            document.write("프로토스의 공격"+"<br/>")
+        }
+        zerga()
+        protossa()
+        
+        
+        let starcraft; 
+        //함수도 하나의 데이터이므로 변수에 함수를 대입하는 것이 가능
+        starcraft = zerga;
+        starcraft()
+        //함수의 내용을 다른 변수에 담아서 호출하는 것을 DELEGATE 라고 함
+
+        starcraft = protossa;
+        starcraft()
+        //다형성(polymorphism) : 똑같은 코드가 대입된 내용에 따라서 다른 함수 호출
+
+
+    </script>
+</body>
+</html>

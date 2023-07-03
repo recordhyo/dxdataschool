@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    <script>
+        function outer(){
+            let data = 0; //함수 안에서만 사용가능한 변수
+            //함수가 함수를 리턴해서 내부의 데이터를 외부에서 변경하는 것 : closure 
+            return function() {
+                data = data + 1;
+                console.log(data)
+            }
+        }
+
+        //outer 함수를 호출하고 그 결과를 inner에 저장하면 outer함수가 리턴하는 함수를 inner에 저장
+        let inner = outer();
+        inner()
+        inner()
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        //함수 생성
+        function f1() {
+            document.write("안녕하세요")
+        } //순서상관X
+
+         let f2 = function() {
+            document.write("반갑습니다")
+        } //순서상관O 선언 후 호출
+
+         f1() //별도의 메모리 공간 할당받아서 f1의 내용을 수행
+         f2() //f2라는 함수를 호출(call)
+
+        let noarg = function() {
+            for (let i =0; i <3; i++){
+                document.write(i+"<br/>");
+            }
+        }
+
+        let arg = function(cnt) {
+            for (let i =0; i <cnt; i++){
+                document.write(i+"<br/>");
+            }
+        }
+        noarg()
+        arg(3)
+        //arg() 매개변수 주지 않으면 undefined -> 작업 수행 못함 
+
+        let IntAddWithInt = function(a,b){
+            let r = a+b;
+            document.write(a+"+"+b+"=", a+b)
+            //return 생략된 경우 맨 마지막에 return 이 있는 것으로 간주
+        }
+        IntAddWithInt(3,5)
+        IntAddWithInt(3)//매개변수 뒤에서부터 생략 가능. 생략하면 undefined가 대입됨
+
+
+
+        let IntPlusWithInt = function(a,b){
+            let r = a+b;
+            return r
+        }
+        document.write(IntPlusWithInt(3,5)) //함수 호출 후 바로 결과 출력
+
+        let result = IntPlusWithInt(3,5) //함수 호출 후 결과 저장 후 출력
+        document.write(result)
+
+    </script>
+</body>
+</html>
