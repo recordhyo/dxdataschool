@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자</title>
+</head>
+<body>
+    <script>
+        //생성자가 없는 경우 동일한 모양의 2개 객체 생성
+        let ar = [
+            {name:"박효심",prt:function(){document.write(this.name);}},
+            {name:"조현아",prt:function(){document.write(this.name);}}
+        ];
+        for(idx in ar){
+            ar[idx].prt();
+        }
+
+        //생성자 - 함수 안에서 this 사용했기 때문에
+        let person = function(name){
+            this.name = name;
+            this.prt = function(){document.write(this.name)}
+        }
+        //메서드 다시 만들지 않고 속성만 설정해서 인스턴스 생성
+        //생성자 이용해서 인스턴스 만들 때 new 와 함께 호출해야 함 -> heap에 인스턴스 생성
+        ar = [new person("박효심"), new person("조현아")]
+        for(idx in ar){
+            ar[idx].prt();
+        }
+
+
+    </script>
+</body>
+</html>

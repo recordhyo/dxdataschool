@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let ar = [23, 48, 79, 16, 21, 3]
+
+        console.log(ar.length) 
+
+        //데이터 순회
+        for(idx in ar){
+            console.log(ar[idx])
+        }
+
+        //데이터 순회하며 하나씩 접근하는 함수 forEach
+        //첫번째는 데이터, 두번째는 인덱스, 세번째는 배열
+        ar.forEach((element, index, array)=>{
+            console.log(element)
+        })
+
+        //map은 사용하는 형태는 forEach와 동일한데 함수가 데이터를 리턴해야함
+        //리턴한 데이터를 모아서 다시 배열로 만들어서 리턴함
+        let r = ar.map((element, index, array)=>{
+            return element + 1
+        })
+        console.log(r)
+
+        //filter 조건에 맞는 true한 값만 리턴함
+        r = ar.filter((element, index, array)=>{
+            return element % 2 ==1
+        })
+        console.log(r)
+
+        let list = [
+            {name:"kim", gender:"남"}, {name:"park", gender:"여"}, {name:"lee", gender:"남"}
+        ]
+
+        let man = list.filter((element,index,array)=> {
+            return element.gender == "남"
+        })
+        console.log(man)
+
+    </script>
+</body>
+
+</html>

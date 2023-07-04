@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        let ar = [{name:"adam",job:"singer"}, {name:"redvelvet",job:"dancer"}]
+        document.write(ar+"<br/>") //[object Object],[object Object]
+        document.write(ar[0]+"<br/>") //[object Object]
+        document.write(ar[0].name+"<br/>") //adam
+
+        for(let i=0;i<ar.length;i++){
+            document.write(ar[i].name+" "+ar[i].job+"<br/>")
+            ar[i].age = 13 //insert
+        }
+        ar[0].age = 25 //update
+
+        delete ar[0].age
+        
+        for(idx in ar){
+            document.write(ar[idx].name+" "+ar[idx].job+" "+ar[idx].age+"<br/>")
+        }
+        //document.write(ar[0].length) undefined 객체 속성의 개수는 알수없음
+    </script>
+</body>
+</html>

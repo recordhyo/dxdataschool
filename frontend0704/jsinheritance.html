@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상속</title>
+</head>
+<body>
+    <script>
+        let Super = class{
+            method(){
+                console.log("상위클래스 메서드");
+            }
+        }
+
+        //Super로부터 상속받는 Sub 클래스
+        class Sub extends Super {
+            //Overriding - 상위클래스의 메서드를 다시 만듦
+            method(){
+                super.method();
+                console.log("하위클래스 메서드")
+            }
+        }
+    
+        let obj = new Sub();
+        obj.method()
+        //Sub에는 method()가 없지만 상속받아서 호출 가능함
+
+    </script>
+</body>
+</html>

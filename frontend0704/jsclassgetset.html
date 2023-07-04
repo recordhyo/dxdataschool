@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getter setter</title>
+</head>
+<body>
+    <script>
+        let Person = class{
+            //생성자
+            constructor(name, score){
+                this.name = name;
+                this.score = score;
+            }
+
+            //출력하는 메서드 
+            disp() {
+                console.log(this.name + " : " + this.score);
+            }
+
+            //getter
+            getName() {
+                return this.name
+            }
+
+            //setter
+            setName(name){
+                this.name = name
+            }
+
+            getScore() {
+                return this.score
+            }
+
+            setScore(score){
+                //유효성검사
+                if(score < 0 || score >100){
+                    alert("적절하지 않은 점수")
+                    return;
+                }
+                this.score = score;
+            }
+        }
+
+        let obj = new Person("박효심",90);
+        obj.setScore(150);
+        obj.disp();
+    </script>
+</body>
+</html>

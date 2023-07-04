@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*let company = "LG HelloVision"
+        let result = company.toUpperCase()
+        console.log(result)
+
+
+        console.log(company.indexOf("lo"))
+        console.log(company.indexOf("hi")) //-1*/
+
+        //모두 대문자로 변경하고 좌우공백 제거
+        let company = "      Adamsoft  ";
+        let result1 = company.trim();
+        console.log(result1.toUpperCase())
+
+        //아래 파일 명에서 확장자를 추출
+        let filename = "file.hwp"
+        let resultarray = filename.split(".")
+        console.log(resultarray[1])
+
+        let dot = filename.indexOf(".")
+        console.log(filename.substring(dot+1))
+
+
+        //CGGC 찾기 단, 중첩되는 경우 앞의 문자열 한 번만 적용
+        let origin = "ABCDECGGCDKEDCGGCGGCCDDDDD"
+        let result3 = origin.indexOf("CGGC")
+        console.log(result3)
+        
+
+    </script>
+</body>
+</html>
