@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template Engine</title>
+</head>
+<body>
+    <p>
+        {% if age >= 30 %}
+            나이가 많음
+        {% else %}
+            나이가 많지 않음
+        {% endif %}
+    </p>
+    <ul>
+        {% for temp in data%}
+            <li>{{temp}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

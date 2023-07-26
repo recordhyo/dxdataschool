@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>fruits</title>
+</head>
+<body>
+    <h2>
+      {% for temp in data %}
+          <div>{{temp.itemid}} - <a href="detail/{{temp.itemid}}"> {{temp.itemname}}</a> : {{temp.price}}원</div>
+      {% endfor %}
+    </h2>
+</body>
+</html>
