@@ -1,0 +1,7 @@
+version: "3"
+services: 
+  apa001:
+    image: httpd
+    ports:
+      - 8081:80
+    restart: always
