@@ -1,0 +1,43 @@
+version: "3.9"
+services:
+  mydb:
+    image: mysql:8.0
+    container_name: mysql_app1
+    volumes:
+      - mydb_data:/var/lib/
+    networks:
+      - backend-net
+    restart: always
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: recordhyo
+      MYSQL_USER: parkhs
+      MYSQL_PASSWORD: admin
+  myweb:
+    image: wordpress:5.7
+    container_name: myweb_app1
+    volumes:
+      - myweb_data:/var/www/html
+      - ./myweb-log:/var/log
+    networks:
+      - backend-net
+      - frontend-net
+    restart: always
+    ports:
+      - 8001:80
+    environment:
+      WORDPRESS_DB_HOST: mydb:3306
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: admin
+      WORDPRESS_DB_NAME: mysql
+    depends_on:
+      - mydb
+networks:
+  frontend-net: {}
+  backend-net: {}
+
+volumes:
+  mydb_data: {}
+  myweb_data: {}      
