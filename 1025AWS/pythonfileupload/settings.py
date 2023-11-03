@@ -133,8 +133,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # AWS Setting
 AWS_REGION = 'ap-northeast-2' #AWS서버의 지역
 AWS_STORAGE_BUCKET_NAME = 'hyobuckettest' #생성한 버킷 이름
-AWS_ACCESS_KEY_ID = 'AKIAXPYBCAWDFQIVVHWV' #액서스 키 ID
-AWS_SECRET_ACCESS_KEY = 'wjDd8VLaf6eTku6Ivu0fXW0V9fC7c/do/7C7PeFz' #액서스 키 PW
+AWS_ACCESS_KEY_ID =  '' #액서스 키 ID
+AWS_SECRET_ACCESS_KEY = '' #액서스 키 PW
 #버킷이름.s3.AWS서버지역.amazonaws.com 형식
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.%s.amazonaws.com' %(AWS_STORAGE_BUCKET_NAME, AWS_REGION)
 # Static Setting
